@@ -1,0 +1,16 @@
+.card{
+    min-width: 400px;
+    min-height: 200px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.pos{
+    margin-bottom: 12px;
+}
+
+.bullet {
+    display: 'inline-block';
+    margin: 0 2px;
+    transform: scale(0.8);
+}
