@@ -21,7 +21,7 @@ export default class Dashboard extends React.Component{
     }
 
     fetchTweets(keyword){
-        var url = 'http://localhost:7071/api/tweets/' + keyword;
+        var url = 'https://company-search.azurewebsites.net/api/tweets/' + keyword;
         console.log("url: " + url)
         fetch(url, {
             method:'GET'
@@ -40,11 +40,16 @@ export default class Dashboard extends React.Component{
             var text = tempTweets[i].text
             var date = tempTweets[i].created_at
             var userName = tempTweets[i].user.name
-
+            var urls = tempTweets[i].entities.urls
+            var url = (urls.length > 0) ? urls[0].url : ""
+            var profileImageUrl = tempTweets[i].user.profile_image_url
+            
             tweets.push({
                 name: userName,
                 date: date,
-                text: text
+                text: text,
+                url: url,
+                profileImageUrl: profileImageUrl
             })
         }
 

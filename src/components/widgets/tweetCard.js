@@ -17,6 +17,8 @@ export default class TweetCard extends React.Component {
         return (
           <Card className="card">
             <CardContent>
+            <img src={this.props.tweet.profileImageUrl} alt="Profile Image"></img>
+
               <Typography color="textSecondary" gutterBottom>
                 {this.props.tweet.name}
               </Typography>
@@ -28,7 +30,7 @@ export default class TweetCard extends React.Component {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">Learn More</Button>
+              <Button size="small" onClick={()=>window.location = this.props.tweet.url}>Read more</Button>
             </CardActions>
           </Card>
         );
