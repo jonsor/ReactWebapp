@@ -1,0 +1,8 @@
+.company_card{
+    min-width: 200px;
+    min-height: 200px;
+    margin: 3px;
+    padding: 3px;
+    flex-grow: 1;
+    box-shadow: 0px 0px 15px 1px #c2c2c2 !important;
+}

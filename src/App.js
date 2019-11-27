@@ -11,20 +11,27 @@ import {
 import Drawer from '@material-ui/core/Drawer';
 import MenuItem from '@material-ui/core/MenuItem';
 import Container from '@material-ui/core/Container';
+import About from './components/about'
 
 function App() {
   return (
     <div className="App">
-    <Router>
-      <Layout/>
-      <Container maxWidth="sm" id="baseContainer">
-      <Switch>
-        <Route exact path="/dashboard">
-          <Dashboard/>
-          </Route>
-      </Switch>
-      </Container>
-    </Router>
+      <Router>
+        <Layout />
+        <div id="baseContainer">
+          <Switch>
+            <Route exact path="/dashboard">
+              <Dashboard />
+            </Route>
+            <Route exact path="/dashboard2">
+              <Dashboard />
+            </Route>
+            <Route exact path="/about">
+              <About />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
@@ -33,21 +40,24 @@ function Layout() {
   return (
     <div id="drawer">
       <Drawer
-      width={400}
-      open={true}
-      variant="permanent"
-      anchor="left"
+        width={400}
+        open={true}
+        variant="permanent"
+        anchor="left"
       >
-          <Link to="/dashboard" style={{ textDecoration: 'none', display: 'block' }}>
-            <MenuItem>
-              <p>Dashboard</p>
-            </MenuItem>
-          </Link>
-          <Link to="/about" style={{ textDecoration: 'none', display: 'block' }}>
-            <MenuItem>
-            <p>About</p>
-            </MenuItem>
-          </Link>
+        <Link to="/dashboard" style={{ textDecoration: 'none', display: 'block' }}>
+          <MenuItem>
+            <h2>Dashboard</h2>
+          </MenuItem>
+        </Link>
+        <Route exact path="/dashboard2">
+              <Dashboard />
+            </Route>
+        <Link to="/about" style={{ textDecoration: 'none', display: 'block' }}>
+          <MenuItem>
+            <h2>About</h2>
+          </MenuItem>
+        </Link>
       </Drawer>
     </div>
   )

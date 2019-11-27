@@ -3,3 +3,22 @@
     margin-right: 1px;
     width: 200,
 }
+
+.container {
+    display: flex; /* or inline-flex */
+}
+
+.item {
+    flex-grow: 1;
+    width: 35%;
+}
+
+.item2 {
+    flex-grow: 2;
+    width:65%;
+}
+
+#topCard{
+    margin-bottom: 3px;
+    box-shadow: 0px 0px 8px 1px #c2c2c2 !important;
+}

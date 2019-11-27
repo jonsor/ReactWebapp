@@ -18,4 +18,14 @@ GET http://localhost:7071/api/tweets/Samsung
 
 ###
 
-GET http://company-search.azurewebsites.net/api/tweets/Samsung
+GET http://company-search.azurewebsites.net/api/tweets/Nokia
+
+
+###
+
+GET https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=apple&apikey=NMJ4EQ7YJJ272PQU
+#NMJ4EQ7YJJ272PQU
+
+###
+
+GET https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=AAPL&apikey=NMJ4EQ7YJJ272PQU
