@@ -71,7 +71,7 @@ export default class Dashboard extends React.Component {
             }
         }
         this.setState({
-            companyStockData: parsedData,
+            companyStockData: parsedData.reverse(),
             range: {
                 high: high,
                 low: low
