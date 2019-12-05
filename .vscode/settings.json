@@ -1,0 +1,8 @@
+{
+    "appService.deploySubpath": "",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/07db71c7-6951-467f-88eb-f62643a846ce/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/company-dashboard"
+}
